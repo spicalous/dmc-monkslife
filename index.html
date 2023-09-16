@@ -5,7 +5,10 @@ layout: base
 <div class="container">
   <div class="min-vh-100 d-flex flex-column">
     <div class="row flex-grow-1">
-      <div class="col-7 d-flex flex-column justify-content-center">
+      <div class="col-12 col-md-5 d-flex align-items-end align-items-md-center">
+        <img src="{{ "assets/images/Mass-Ordination-4.webp" | relative_url }}" class="img-fluid rounded mx-auto d-block shadow opacity-75 z-n1" alt="...">
+      </div>
+      <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
         <div class="display-3">
           Choosing the monastic life
         </div>
@@ -16,9 +19,6 @@ layout: base
           vitae interdum lacus molestie.
         </p>
       </div>
-      <div class="col-5 d-flex align-items-center">
-        <img src="https://placehold.co/400x600" class="rounded mx-auto d-block" alt="...">
-      </div>
     </div>
     <div class="row text-center flex-grow-0 py-3">
       <a href="#why-ordain" class="link-underline link-underline-opacity-0">
@@ -28,79 +28,26 @@ layout: base
       </a>
     </div>
   </div>
-  <div class="min-vh-100 d-flex flex-column">
-    <div class="row flex-grow-1" id="why-ordain">
-      <div class="col-7 d-flex align-items-center justify-content-center">
-        <div class="ratio ratio-16x9">
-          <iframe class="rounded" src="https://www.youtube.com/embed/U5VxytexduI?si=I7mSmLyot1YvYGLD" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-5 d-flex flex-column justify-content-center text-end">
-        <div class="display-6">
-          Why ordain as a monk?
-        </div>
-      </div>
-    </div>
-    <div class="row text-center flex-grow-0 py-3">
-      <a href="#steps-to-ordination" class="link-underline link-underline-opacity-0">
-        Steps to ordaining
-        <br>
-        {% include icons/arrow-down-short.html %}
-      </a>
-    </div>
-  </div>
-  <div class="min-vh-100 d-flex flex-column">
-    <div class="row flex-grow-1" id="steps-to-ordination">
-      <div class="col-5 d-flex flex-column justify-content-center">
-        <div class="display-6">
-          The steps in ordaining
-        </div>
-      </div>
-      <div class="col-7 d-flex align-items-center justify-content-center">
-        <div class="ratio ratio-16x9">
-          <iframe class="rounded" src="https://www.youtube.com/embed/iNUeMI4GzU8?si=e9Xzh3DpUpPKKIK2" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="row text-center flex-grow-0 py-3">
-      <a href="#inspiration" class="link-underline link-underline-opacity-0">
-        Inspiration
-        <br>
-        {% include icons/arrow-down-short.html %}
-      </a>
-    </div>
-  </div>
-  <div class="min-vh-100 d-flex flex-column">
-    <div class="row flex-grow-1" id="inspiration">
-      <div class="col-7 d-flex align-items-center justify-content-center">
-        <div class="ratio ratio-16x9">
-          <iframe class="rounded" src="https://www.youtube.com/embed/3kiXPFnRLxU?si=fW7xqHJE3EwJfC6V" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-5 d-flex flex-column justify-content-center text-end">
-        <div class="display-6">
-          What inspired you to enter the Buddhist monkhood?
-        </div>
-      </div>
-    </div>
-    <div class="row text-center flex-grow-0 py-3">
-      <a href="#benefits" class="link-underline link-underline-opacity-0">
-        Benefits
-        <br>
-        {% include icons/arrow-down-short.html %}
-      </a>
-    </div>
-  </div>
-  <div class="row min-vh-100">
-    <div class="col-5 d-flex flex-column justify-content-center">
-      <div class="display-6" id="benefits">
-        Stress and how meditation can relieve it
-      </div>
-    </div>
-    <div class="col-7 d-flex align-items-center justify-content-center">
-      <div class="ratio ratio-16x9">
-        <iframe class="rounded" src="https://www.youtube.com/embed/G7s6eyVNwkw?si=wXUAM9TeZRBo2AJk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
+  {% include index-title-video.html id="why-ordain"
+                                    src="https://www.youtube.com/embed/U5VxytexduI?si=I7mSmLyot1YvYGLD"
+                                    title="Why ordain as a monk?"
+                                    link-href="#steps-to-ordination"
+                                    link-text="Steps to ordaining"
+  %}
+  {% include index-video-title.html id="steps-to-ordination"
+                                    src="https://www.youtube.com/embed/iNUeMI4GzU8?si=e9Xzh3DpUpPKKIK2"
+                                    title="The steps in ordaining"
+                                    link-href="#inspiration"
+                                    link-text="Inspiration"
+  %}
+  {% include index-title-video.html id="inspiration"
+                                    src="https://www.youtube.com/embed/3kiXPFnRLxU?si=fW7xqHJE3EwJfC6V"
+                                    title="What inspired you to enter the Buddhist monkhood?"
+                                    link-href="#benefits"
+                                    link-text="Benefits"
+  %}
+  {% include index-video-title.html id="benefits"
+                                    src="https://www.youtube.com/embed/G7s6eyVNwkw?si=wXUAM9TeZRBo2AJk"
+                                    title="Stress and how meditation can relieve it"
+  %}
 </div>
